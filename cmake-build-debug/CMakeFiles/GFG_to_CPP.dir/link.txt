@@ -1,0 +1,1 @@
+/usr/bin/c++ -g CMakeFiles/GFG_to_CPP.dir/main.cpp.o -o GFG_to_CPP 

@@ -1,0 +1,115 @@
+// Optimized implementation of Bubble sort
+#include <bits/stdc++.h>
+using namespace std;
+void swap(int *xp, int *yp)
+{
+    int temp = *xp;
+    *xp = *yp;
+    *yp = temp;
+}
+ 
+// An optimized version of Bubble Sort
+void bubbleSort(int arr[], int n)
+{
+   int i, j;
+   bool swapped;
+   for (i = 0; i < n-1; i++)
+   {
+     swapped = false;
+     for (j = 0; j < n-i-1; j++)
+     {
+        if (arr[j] > arr[j+1])
+        {
+           swap(&arr[j], &arr[j+1]);
+           swapped = true;
+        }
+     }
+ 
+     // IF no two elements were swapped by inner loop, then break
+     if (swapped == false)
+        break;
+   }
+}
+ 
+/* Function to print an array */
+void printArray(int arr[], int size)
+{
+    int i;
+    for (i = 0; i < size; i++)
+        cout <<" "<< arr[i];
+    cout <<" n";
+}
+ 
+// Driver program to test above functions
+int main()
+{
+    int arr[] = {64, 34, 25, 12, 22, 11, 90};
+    int n = sizeof(arr)/sizeof(arr[0]);
+    bubbleSort(arr, n);
+    cout <<"Sorted array: \n";
+    printArray(arr, n);
+    return 0;
+}
+ 
+ 
+// This code is contributed by shivanisinghss2110
+// C++ program for linear search
+#include<bits/stdc++.h>
+using namespace std;
+ 
+void search(vector<int> arr, int search_Element)
+{
+    int left = 0;
+    int length = arr.size();
+    int position = -1;
+      int right = length - 1;
+       
+    // Run loop from 0 to right
+    for(left = 0; left <= right;)
+    {
+         
+        // If search_element is found with
+        // left variable
+        if (arr[left] == search_Element)
+        {
+             
+            position = left;
+            cout << "Element found in Array at "
+                 << position + 1 << " Position with "
+                 << left + 1 << " Attempt";
+                
+            break;
+        }
+       
+        // If search_element is found with
+        // right variable
+        if (arr[right] == search_Element)
+        {
+            position = right;
+            cout << "Element found in Array at "
+                 << position + 1 << " Position with "
+                 << length - right << " Attempt";
+                
+            break;
+        }
+        left++;
+        right--;
+    }
+ 
+    // If element not found
+    if (position == -1)
+        cout << "Not found in Array with "
+             << left << " Attempt";
+}
+ 
+// Driver code
+int main()
+{
+    vector<int> arr{ 1, 2, 3, 4, 5 };
+    int search_element = 5;
+     
+    // Function call
+    search(arr, search_element);
+}
+     
+// This code is contributed by mayanktyagi1709
