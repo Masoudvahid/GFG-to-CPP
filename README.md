@@ -14,7 +14,7 @@ $ pip install -r requirements.txt
 For Lunching the application using CMake file you should firstly go to the following path using terminal: ``GFG-to-CPP``
 and then enter the commands below:
 ```
-$ cmake ..
+$ cmake .
 $ make
 and now for running the exec, you shold perform the following command:
 $ ./GFG_to_CPP
