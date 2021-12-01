@@ -2,7 +2,7 @@
 
 int main() {
     if (fork())
-        execlp("python3", "python3", "../src/Python/main.py", nullptr);
+        execlp("python3", "python3", "src/Python/main.py", nullptr);
 
     return 0;
 }
