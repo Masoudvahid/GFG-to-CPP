@@ -1,3 +1,0 @@
-/home/masoud/Desktop/GFG-to-CPP/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/home/masoud/Desktop/GFG-to-CPP/cmake-build-debug/CMakeFiles/edit_cache.dir
-/home/masoud/Desktop/GFG-to-CPP/cmake-build-debug/CMakeFiles/GFG_to_CPP.dir
