@@ -59,7 +59,7 @@ public:
 private:
     static void GetLanguages() {
         vector<string> available_languages;
-        string path = "../search_results/Codes";
+        string path = "search_results/Codes";
         for (const auto &entry : /*fs::*/directory_iterator(path)) {
             ifstream code_file(entry.path());
             string line_of_language_name;
@@ -87,7 +87,7 @@ private:
     }
 
     static void ReloadLinks() {
-        string path = "../search_results/Links.txt";
+        string path = "search_results/Links.txt";
         ifstream links_list(path);
         string line;
         while (getline(links_list, line))
@@ -97,7 +97,7 @@ private:
 
     static void NewSearch() {
         if (fork())
-            execlp("python3", "python3", "../src/Python/main.py", NULL);
+            execlp("python3", "python3", "src/Python/main.py", NULL);
     }
 
 };
