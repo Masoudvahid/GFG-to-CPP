@@ -11,7 +11,7 @@ $ pip install -r requirements.txt
 ```
 
 ### Lunching the application using CMake file
-For Lunching the application using CMake file you should firstly go to the following path using terminal: ``./GFG-to-CPP/cmake-build-debug/``
+For Lunching the application using CMake file you should firstly go to the following path using terminal: ``GFG-to-CPP``
 and then enter the commands below:
 ```
 $ cmake ..
