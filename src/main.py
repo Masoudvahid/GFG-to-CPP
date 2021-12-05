@@ -31,7 +31,6 @@ index = 0
 # Empty the directory
 files = glob.glob('search_results/Codes/*.txt')
 for f in files:
-    print(f)
     os.remove(f)
 # Create files
 for code_container in soup.find_all('div', class_='container'):
