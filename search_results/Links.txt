@@ -1,9 +1,0 @@
-https://www.geeksforgeeks.org/binary-search/
-https://www.geeksforgeeks.org/linear-search/
-https://www.geeksforgeeks.org/breadth-first-search-or-bfs-for-a-graph/
-https://www.geeksforgeeks.org/searching-algorithms/
-https://www.geeksforgeeks.org/sublist-search-search-a-linked-list-in-another-list/
-https://www.geeksforgeeks.org/linear-search-vs-binary-search/
-https://www.geeksforgeeks.org/binary-search-tree-set-1-search-and-insertion/
-https://www.geeksforgeeks.org/a-search-algorithm/
-https://www.geeksforgeeks.org/performing-google-search-using-python-code/
