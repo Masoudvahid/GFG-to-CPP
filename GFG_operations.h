@@ -87,7 +87,7 @@ void GFG_operations::RenameFiles() {
     for (const auto &entry : fs::directory_iterator(path_to_codes)) {
         ifstream code_file(entry.path());
         string line_of_language_name;
-        for (int i = 0; i < 4; ++i) {
+        for (int rename_iter = 0; rename_iter < 4; ++rename_iter) {
             getline(code_file, line_of_language_name);
             for (auto &language : languages) {
                 if (line_of_language_name.find(language) != std::string::npos) {
@@ -105,8 +105,8 @@ void GFG_operations::RenameFiles() {
 
 void GFG_operations::GetLanguages() {
     cout << "\nList of available languages: \n";
-    for (int i = 0; i < available_languages.size(); ++i)
-        cout << i + 1 << ") " << available_languages[i] << endl;
+    for (int get_language_iter = 0; get_language_iter < available_languages.size(); ++get_language_iter)
+        cout << get_language_iter + 1 << ") " << available_languages[get_language_iter] << endl;
     cout << "\nEnter the index for desired language: \n";
     int index_of_language;
     cin >> index_of_language;
