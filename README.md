@@ -20,6 +20,19 @@ and now for running the exec, you shold perform the following command:
 $ ./GFG_to_CPP
 ```
 
+
+### Testing
+The test is based on ``binary search`` keyword for the input.
+test test, checks if the files for this particular search exitsts or not.
+For performing the test, make sure that you have searched for ``binary search`` using the GFG application. Then go to 
+tests directory and enter the command bellow:
+```
+cmake -S . -B build && cmake --build build && build/GFGtest
+```
+if everyting is ok, you can see that 3 tests are passed!
+You can also see the screenshots for the tests.
+
 ----
 
 **ATTENTION:** ``Application can lunch only using Linux operating system!``
+
