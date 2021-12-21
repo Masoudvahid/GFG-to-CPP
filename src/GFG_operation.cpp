@@ -48,11 +48,12 @@ private:
 
     void NewSearch();
 
-    std::vector<std::string> available_languages;
+    std::vector <std::string> available_languages;
     std::string languages[7] = {"C++", "C#", "Java", "Python", "C", "php", "script"};
-    std::string path_to_codes = "search_results/Codes";
     std::string path_to_links = "search_results/Links.txt";
     std::string path_to_python_file = "src/sites_scraping_python/site_scraping.py";
+public:
+    std::string path_to_codes = "search_results/Codes";
 };
 
 void GFG_operations::RenameFiles() {
@@ -102,4 +103,20 @@ void GFG_operations::NewSearch() {
     if ((pid = fork()) == 0)
         execlp("python3", "python3", path_to_python_file.c_str(), nullptr);
     waitpid(pid, nullptr, 0);
+}
+
+class RunGFG : public GFG_operations {
+public:
+    RunGFG() {
+        remove_codes_files();
+    }
+
+    void remove_codes_files();
+
+};
+
+void RunGFG::remove_codes_files() {
+   for (const auto &entry : std::filesystem::directory_iterator("../" + path_to_codes)) {
+        remove(entry.path());
+    }
 }
