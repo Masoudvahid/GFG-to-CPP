@@ -1,8 +1,6 @@
-#include "../include/GFG_operations.h"
+#include "../include/GFG_operation.h"
 
-class GFG_operations {
-public:
-    GFG_operations() {
+GFG_operations::GFG_operations() {
         NewSearch();
         RenameFiles();
         while (true) {
@@ -33,28 +31,6 @@ public:
             }
         }
     }
-
-    ~GFG_operations() {
-        std::cout << "\nThank you for using GFG_operations!!!\n"
-                  << "For any comments, contact: masoud.vahid10@gmail.com\n";
-    }
-
-private:
-    void RenameFiles();
-
-    void GetLanguages();
-
-    void ReloadLinks();
-
-    void NewSearch();
-
-    std::vector <std::string> available_languages;
-    std::string languages[7] = {"C++", "C#", "Java", "Python", "C", "php", "script"};
-    std::string path_to_links = "search_results/Links.txt";
-    std::string path_to_python_file = "src/sites_scraping_python/site_scraping.py";
-public:
-    std::string path_to_codes = "search_results/Codes";
-};
 
 void GFG_operations::RenameFiles() {
     int counter = 0;
@@ -105,18 +81,18 @@ void GFG_operations::NewSearch() {
     waitpid(pid, nullptr, 0);
 }
 
-class RunGFG : public GFG_operations {
-public:
-    RunGFG() {
-        remove_codes_files();
+GFG_operations::~GFG_operations() {
+        std::cout << "\nThank you for using GFG_operations!!!\n"
+                  << "For any comments, contact: masoud.vahid10@gmail.com\n";
     }
-
-    void remove_codes_files();
-
-};
 
 void RunGFG::remove_codes_files() {
    for (const auto &entry : std::filesystem::directory_iterator("../" + path_to_codes)) {
         remove(entry.path());
     }
 }
+
+RunGFG::RunGFG() {
+        remove_codes_files();
+    }
+
