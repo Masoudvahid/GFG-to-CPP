@@ -89,7 +89,9 @@ GFG_operations::~GFG_operations() {
 void RunGFG::remove_codes_files() {
   for (const auto &entry :
        std::filesystem::directory_iterator("./" + path_to_codes)) {
-    remove(entry.path());
+    if (entry.path().filename() != ".keep")
+      remove(entry.path());
+    remove(std::filesystem::path{path_to_links});
   }
 }
 
