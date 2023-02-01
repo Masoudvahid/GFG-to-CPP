@@ -1,0 +1,5 @@
+**/build/
+**/bin/
+**/.vscode/
+**/search_results/*.txt
+**/search_results/Codes/*.txt
