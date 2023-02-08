@@ -33,11 +33,12 @@ private:
     void NewSearch();
 
     std::vector <std::string> available_languages;
-    std::string languages[7] = {"C++", "C#", "Java", "Python", "C", "php", "script"};
-    std::string path_to_links = "search_results/Links.txt";
+    std::string languages[7] = {"C++", "C#",  "Java",  "Python",
+                                "C",   "php", "script"};
     std::string path_to_python_file = "src/sites_scraping_python/site_scraping.py";
 public:
     std::string path_to_codes = "search_results/Codes";
+    std::string path_to_links = "search_results/Links.txt";
 };
 
 class RunGFG : public GFG_operations {
